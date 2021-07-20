@@ -1,0 +1,25 @@
+.footer {
+  font-family: "Roboto", sans-serif;
+  background: #141516;
+  color: #fff;
+  text-align: left;
+}
+.footer_box {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 100px;
+}
+.footer_list ul li:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.footer_list ul li {
+  list-style-type: none;
+  line-height: 30px;
+  margin-left: -35px;
+}
+.footer_list hr {
+  width: 40%;
+  background: #fff;
+  margin-left: 0;
+}
