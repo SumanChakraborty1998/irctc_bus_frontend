@@ -7,7 +7,8 @@
 .footer_box {
   display: flex;
   justify-content: space-around;
-  padding: 20px 100px;
+  padding: 20px 120px;
+  font-size: 14px;
 }
 .footer_list ul li:hover {
   cursor: pointer;
@@ -22,4 +23,10 @@
   width: 40%;
   background: #fff;
   margin-left: 0;
+}
+.bottom a {
+  padding: 0 10px;
+}
+.uparrow {
+  cursor: pointer;
 }
