@@ -1,0 +1,25 @@
+.faq {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  margin-right: 20px;
+}
+.faq_list {
+  font-size: 14px;
+  text-align: justify;
+  padding: 2px;
+}
+.faq p:hover {
+  text-decoration: underline;
+  color: "blue";
+}
+
+.head h2{
+  color: #2d2383;
+  font-size: 26px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.head hr {
+  width: 80%;
+}

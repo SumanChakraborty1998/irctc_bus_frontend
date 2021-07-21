@@ -8,7 +8,6 @@ import {
   FaLinkedin,
   FaTelegram,
   FaTumblr,
-  FaArrowAltCircleUp,
 } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import styles from "./Footer.module.css";

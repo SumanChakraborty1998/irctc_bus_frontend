@@ -5,7 +5,6 @@ import FooterCopyRight from "./FooterCopyRight";
 const Footer = () => {
   return (
     <>
-      <div>lorem</div>
       <div className={styles.footer}>
         <div className={styles.footer_box}>
           <div className={styles.footer_list}>

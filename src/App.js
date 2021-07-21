@@ -1,8 +1,10 @@
-import Footer from "./Home/Footer/Footer";
+// import Footer from "./Components/Footer/Footer";
+// import Faq from "./Components/FAQ/Faq";
 function App() {
   return (
     <div className="App">
-      <Footer />
+      {/* <Faq />
+      <Footer /> */}
     </div>
   );
 }
