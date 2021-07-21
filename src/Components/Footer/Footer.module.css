@@ -1,3 +1,8 @@
+/* * {
+  padding: 0;
+  margin: 0;
+} */
+
 .footer {
   font-family: "Roboto", sans-serif;
   background: #141516;
@@ -5,7 +10,6 @@
   text-align: left;
 }
 .footer_box {
-  display: flex;
   justify-content: space-around;
   padding: 20px 120px;
   font-size: 14px;
@@ -29,4 +33,17 @@
 }
 .uparrow {
   cursor: pointer;
+}
+.footer_part {
+  justify-content: space-evenly;
+  padding: "0px 150px";
+}
+
+@media only screen and (min-width: 768px) {
+  .footer_box {
+    display: flex;
+  }
+  .footer_part {
+    display: flex;
+  }
 }

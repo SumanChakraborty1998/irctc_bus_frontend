@@ -1,5 +1,11 @@
-.faq {
+.root {
+  width: 80%;
   font-family: "Roboto", sans-serif;
+  margin: auto;
+  padding: 30px 100px;
+  color: #212529;
+}
+.faq {
   width: 100%;
   margin-right: 20px;
 }
@@ -13,7 +19,7 @@
   color: "blue";
 }
 
-.head h2{
+.head h2 {
   color: #2d2383;
   font-size: 26px;
   text-align: center;
@@ -21,5 +27,20 @@
 }
 
 .head hr {
-  width: 80%;
+  width: 75%;
+}
+.view_button {
+  width: 75%;
+  margin: auto;
+}
+
+.view_button p {
+  font-weight: 500;
+  text-align: right;
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  .root {
+    display: flex;
+  }
 }

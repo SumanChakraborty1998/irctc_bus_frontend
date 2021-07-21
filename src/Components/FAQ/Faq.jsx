@@ -9,13 +9,6 @@ import styles from "./Faq.module.css";
 import { DataLeft, DataRight } from "./data";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    width: "80%",
-    margin: "auto",
-    padding: "30px 100px",
-    display: "flex",
-    color: "#212529",
-  },
   heading: {
     fontSize: theme.typography.pxToRem(13),
     fontWeight: theme.typography.fontWeightBold,
@@ -31,7 +24,7 @@ const Faq = () => {
         <h2>FAQ</h2>
         <hr></hr>
       </div>
-      <div className={classes.root}>
+      <div className={styles.root}>
         <div className={styles.faq}>
           {DataLeft.map((item) => {
             return (
@@ -86,6 +79,9 @@ const Faq = () => {
             );
           })}
         </div>
+      </div>
+      <div className={styles.view_button}>
+        <p>View More</p>
       </div>
     </>
   );

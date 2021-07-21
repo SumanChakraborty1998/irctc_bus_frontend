@@ -16,13 +16,7 @@ import Scroll from "./Scroll";
 const FooterCopyRight = () => {
   return (
     <>
-      <footer
-        style={{
-          display: "flex",
-          justifyContent: "space-evenly",
-          padding: "0px 150px",
-        }}
-      >
+      <footer className={styles.footer_part}>
         <div>
           <p>© 2021 IRCTC || All Right Reserved</p>
         </div>
@@ -31,50 +25,50 @@ const FooterCopyRight = () => {
             style={{
               display: "flex",
               cursor: "pointer",
-              padding: "10px",
+              padding: "15px 0",
             }}
           >
             <IconContext.Provider
               value={{
                 color: "#007bff",
-                size: "40px",
+                size: "30px",
               }}
             >
               <div>
                 <FaFacebookF />
               </div>
             </IconContext.Provider>
-            <IconContext.Provider value={{ color: "red", size: "40px" }}>
+            <IconContext.Provider value={{ color: "red", size: "30px" }}>
               <div>
                 <FaYoutube />
               </div>
             </IconContext.Provider>
-            <IconContext.Provider value={{ color: "#4c95e2", size: "40px" }}>
+            <IconContext.Provider value={{ color: "#4c95e2", size: "30px" }}>
               <div>
                 <FaLinkedin />
               </div>
             </IconContext.Provider>
-            <IconContext.Provider value={{ color: "#427dbb", size: "40px" }}>
+            <IconContext.Provider value={{ color: "#427dbb", size: "30px" }}>
               <div>
                 <FaTelegram />
               </div>
             </IconContext.Provider>
-            <IconContext.Provider value={{ color: "#fd7e14", size: "40px" }}>
+            <IconContext.Provider value={{ color: "#fd7e14", size: "30px" }}>
               <div>
                 <FaInstagram />
               </div>
             </IconContext.Provider>
-            <IconContext.Provider value={{ color: "#dc3545", size: "40px" }}>
+            <IconContext.Provider value={{ color: "#dc3545", size: "30px" }}>
               <div>
                 <FaPinterest />
               </div>
             </IconContext.Provider>
-            <IconContext.Provider value={{ color: "#427dbb", size: "40px" }}>
+            <IconContext.Provider value={{ color: "#427dbb", size: "30px" }}>
               <div>
                 <FaTumblr />
               </div>
             </IconContext.Provider>
-            <IconContext.Provider value={{ color: "#17a2b8", size: "40px" }}>
+            <IconContext.Provider value={{ color: "#17a2b8", size: "30px" }}>
               <div>
                 <FaTwitter />
               </div>
