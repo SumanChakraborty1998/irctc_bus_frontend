@@ -1,10 +1,9 @@
-import Footer from "./Components/Footer/Footer";
-import Faq from "./Components/FAQ/Faq";
+import ReviewBooking from "./Pages/ReviewBooking/ReviewBooking";
+
 function App() {
   return (
     <div className="App">
-      <Faq />
-       <Footer />
+      <ReviewBooking />
     </div>
   );
 }
