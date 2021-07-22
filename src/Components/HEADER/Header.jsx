@@ -1,4 +1,4 @@
-import style from "../CSS/Components.module.css";
+import style from "../Css/Components.module.css";
 import DirectionsBusIcon from '@material-ui/icons/DirectionsBus';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
