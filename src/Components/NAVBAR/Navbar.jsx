@@ -1,5 +1,5 @@
 import { useState } from "react";
-import style from "../CSS/Components.module.css";
+import style from "../Css/Components.module.css";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import FormatAlignLeftIcon from '@material-ui/icons/FormatAlignLeft';
 
@@ -35,7 +35,7 @@ const Navbar = () => {
                         <FormatAlignLeftIcon />
                     </button>
 
-                    {/* Using ternery operater to toggle className on state change*/}
+                    {/* Using ternary operater to toggle className on state change*/}
                     <ul
                         className={`${style.navlinks} ${
                             openNavLinks ? style.openNav : ""
