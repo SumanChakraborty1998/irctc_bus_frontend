@@ -67,7 +67,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <FooterCopyRight />
+     {/* // <FooterCopyRight /> */}
     </>
   );
 };

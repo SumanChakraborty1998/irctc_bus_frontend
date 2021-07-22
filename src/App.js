@@ -1,10 +1,11 @@
-import Footer from "./Components/Footer/Footer";
-import Faq from "./Components/FAQ/Faq";
+import logo from './logo.svg';
+import './App.css';
+import Home from './Pages/Home';
+
 function App() {
   return (
     <div className="App">
-      <Faq />
-       <Footer />
+      <Home/>
     </div>
   );
 }
