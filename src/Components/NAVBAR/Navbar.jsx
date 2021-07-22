@@ -1,7 +1,7 @@
 import { useState } from "react";
-import style from "./Components.module.css";
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
-import FormatAlignLeftIcon from "@material-ui/icons/FormatAlignLeft";
+import style from "../CSS/Components.module.css";
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import FormatAlignLeftIcon from '@material-ui/icons/FormatAlignLeft';
 
 const Navbar = () => {
     const [openNavLinks, setOpenNavLinks] = useState(false);
