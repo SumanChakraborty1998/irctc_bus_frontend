@@ -1,7 +1,8 @@
-import Footer from "../Components/Footer"
 import Header from "../Components/Header"
 import Navbar from "../Components/Navbar"
 import TrendingPackages from "../Components/TrendingPackages"
+import Faq from "../Components/FAQ/Faq"
+import Footer from "../Components/Footer/Footer"
 
 const Home = () =>{
     return(
@@ -10,6 +11,8 @@ const Home = () =>{
             <Header/>
             <TrendingPackages/>
             {/* <Footer/> */}
+            <Faq/>
+            <Footer/>
         </div>
     )
 }
