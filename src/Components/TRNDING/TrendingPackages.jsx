@@ -1,4 +1,4 @@
-import style from "./Components.module.css";
+import style from "../CSS/Components.module.css";
 
 const TrendingPackages = () => {
     return(

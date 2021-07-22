@@ -1,6 +1,6 @@
-import Header from "../Components/Header"
-import Navbar from "../Components/Navbar"
-import TrendingPackages from "../Components/TrendingPackages"
+import Header from "../Components/HEADER/Header"
+import Navbar from "../Components/NAVBAR/Navbar"
+import TrendingPackages from "../Components/TRNDING/TrendingPackages"
 import Faq from "../Components/FAQ/Faq"
 import Footer from "../Components/Footer/Footer"
 
