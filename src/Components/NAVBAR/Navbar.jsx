@@ -1,5 +1,5 @@
 import { useState } from "react";
-import style from "../Css/Components.module.css";
+import style from "../CSS/Components.module.css";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import FormatAlignLeftIcon from '@material-ui/icons/FormatAlignLeft';
 

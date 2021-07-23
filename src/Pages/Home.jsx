@@ -1,7 +1,7 @@
-import Header from "../Components/Header/Header"
-import Navbar from "../Components/Navbar/Navbar"
+import Header from "../Components/HEADER/Header"
+import Navbar from "../Components/NAVBAR/Navbar"
 import TrendingPackages from "../Components/Trending/TrendingPackages"
-import Faq from "../Components/Faq/Faq"
+import Faq from "../Components/FAQ/Faq"
 import Footer from "../Components/Footer/Footer"
 
 const Home = () =>{
