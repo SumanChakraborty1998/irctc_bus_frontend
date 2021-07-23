@@ -3,7 +3,7 @@ import style from "../CSS/Components.module.css";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import FormatAlignLeftIcon from '@material-ui/icons/FormatAlignLeft';
 
-const Navbar = () => {
+const Navbar = ({openForm}) => {
     const [openNavLinks, setOpenNavLinks] = useState(false);
 
     //To open and close navlinks (sidebar);
@@ -25,7 +25,7 @@ const Navbar = () => {
                     </ul>
                 </li>
 
-                <li>Login</li>
+                <li onClick={openForm}>Login</li>
 
                 <li>
                     <button
