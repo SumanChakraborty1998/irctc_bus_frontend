@@ -1,7 +1,9 @@
-import style from "../Css/Components.module.css";
+import style from "../CSS/Components.module.css";
 import DirectionsBusIcon from '@material-ui/icons/DirectionsBus';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import SearchIcon from '@material-ui/icons/Search';
+import {useState} from "react";
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -19,6 +21,15 @@ const useStyles = makeStyles((theme) => ({
 const Header = () => {
 
     const classes = useStyles();
+
+    const [departFrom, setDepartFrom] = useState("")
+    const [goingTo, setGoingTo] = useState("")
+    const [departureDate , setDepartureDate] = useState("")
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      console.log(departFrom,goingTo,departureDate)
+    }
 
     return(
         <header>
@@ -117,21 +128,21 @@ const Header = () => {
                </div>
                 
                <div className={style.headerBusSearchContainer}>
-                   <form>
+                   <form onSubmit={handleSubmit}>
                        <div>
                          <label>Depart From</label> <br/>
-                         <input type="text" placeholder="Depart From"/>
+                         <input type="text" value={departFrom} placeholder="Depart From" onChange={(e)=>setDepartFrom(e.target.value)}/>
                        </div>
                        <div>
                          <label>Going to</label> <br/>
-                         <input type="text" placeholder="Going to"/>
+                         <input type="text" value={goingTo} placeholder="Going to" onChange={(e)=>setGoingTo(e.target.value)}/>
                        </div>
                        <div>
                          <label>Departure Date</label> <br/>
-                         <input type="date" value="Departure Date"/>
+                         <input type="date" value={departureDate} onChange={(e)=>setDepartureDate(e.target.value)}/>
                        </div>
-                       <div className={style.headerSearchBtn}>
-                         <input type="submit" value="Search Bus"/>
+                       <div className={style.headerSearchBtnContainer}>
+                         <button type="submit" className={style.busSearchBtn}>Search Bus <SearchIcon/> </button>
                        </div>
                    </form>
                </div>
