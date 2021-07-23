@@ -1,13 +1,11 @@
-// import ReviewBooking from "./Pages/ReviewBooking/ReviewBooking";
-import Faq from "./Components/FAQ/Faq";
-import Footer from "./Components/Footer/Footer";
+import logo from "./logo.svg";
+import "./App.css";
+import Home from "./Pages/Home";
 
 function App() {
   return (
     <div className="App">
-      {/* <ReviewBooking /> */}
-      <Faq />
-      <Footer />
+      <Home />
     </div>
   );
 }

@@ -1,0 +1,355 @@
+/*================== Navbar =====================*/
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px 20px;
+  position: fixed;
+  width: 100%;
+  background-color: rgb(253, 253, 253);
+}
+
+.logo {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.navElements {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+.navElements li {
+  list-style: none;
+  margin-right: 50px;
+}
+
+.navElements li img {
+  height: 50px;
+}
+
+.navlinks {
+  /* display: none; */
+  position: absolute;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  top: 0;
+  right: 0;
+  text-align: left;
+  transform: translateX(100%);
+}
+.navlinks li {
+  margin-top: 20px;
+  width: 270px;
+  padding-left: 10px;
+}
+
+/* toggle navlinks */
+.openNav {
+  transform: translateX(0%);
+}
+
+.openNavBtn{
+  background-color: transparent;
+  border:none;
+}
+.closeNavBtn{
+  background-color: transparent;
+  border:none;
+}
+.contactDropdown {
+  display: none;
+}
+
+/*Responsive Navbar*/
+
+@media screen and (max-width: 600px) {
+  .navElements li img {
+    display: none;
+  }
+  .navElements li {
+    margin-right: 15px;
+  }
+  .navlinks {
+    /* display: none; */
+    width: 70%;
+  }
+}
+
+/*================== Header =====================*/
+
+.banner {
+  background-image: url("https://www.bus.irctc.co.in/assets/img/Bus_Banner01.jpg");
+  background-repeat: repeat;
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  animation: marquee 50s infinite linear;
+  animation-duration: 50s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: marquee;
+}
+
+.headerCol_1,
+.headerCol_2 {
+  width: 40%;
+  padding-bottom: 20px;
+}
+
+/* header background animation */
+@keyframes marquee {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: -1190px;
+  }
+}
+
+.searchBusHeader {
+  background-color: #2d2383;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.iconsWrap {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+}
+.iconsWrap li {
+  list-style: none;
+}
+.iconsWrap li a {
+  color: white;
+  text-decoration: none;
+}
+.icons {
+  width: 56px;
+  background: url("https://www.bus.irctc.co.in/assets/img/nav-sprite.png")
+    no-repeat 0 0;
+  height: 56px;
+  display: inline-block;
+  border: 1px solid #fff;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: all 0.3s linear 0s;
+}
+
+.flights {
+  background-position: 0 6px;
+}
+
+.irctcHotels {
+  background-position: -182px 6px;
+}
+
+.busTickets {
+  background-position: -486px 6px;
+}
+
+.retiringRoom {
+  background-position: -120px 6px;
+}
+
+.lounge {
+  /* background-position: -61px -56px; */
+  background-position: -61px 5px;
+}
+
+.tourPackages {
+  background-position: -901px 4px;
+}
+
+.touristTrains {
+  background-position: -242px 6px;
+}
+
+.buddhistTrain {
+  background-position: -787px 3px;
+}
+
+.maharajas {
+  background-position: -609px 4px;
+}
+
+.goldenChariot {
+  background-position: -728px 2px;
+}
+
+.cruise {
+  background-position: -426px 5px;
+}
+
+.headerTitle_1 {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerBusSearchContainer{
+  padding: 5px;
+}
+
+.headerBusSearchContainer form {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  border-radius: 5px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.headerBusSearchContainer div{
+  text-align: left;
+  padding: 10px;
+  height: 50px;
+}
+
+.headerBusSearchContainer div label{
+  font-size: 12px;
+}
+
+.headerBusSearchContainer div input[type="text"],input[type="date"]{
+  height: 30px;
+  width: 300px;
+  border: none;
+  outline: none;
+  font-size: 24px;
+}
+
+.headerBusSearchContainer div [type="submit"]{
+  padding: 10px;
+  border-radius: 50px;
+}
+.headerSearchBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Responsive Header*/
+
+@media screen and (max-width: 900px) {
+  .headerBusSearchContainer div input[type="text"],input[type="date"]{
+    height: 30px;
+    width: 200px;
+    border: none;
+    outline: none;
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  
+  .searchBusHeader {
+    background-color: #2d2383;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px 0;
+  }
+
+  
+  .headerCol_1 img,
+  .headerCol_2 img{
+    width: 90%;
+    padding-bottom: 20px;
+  }
+
+  .iconsWrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .iconsWrap li a span{
+    display: none;
+  }
+
+  .headerBusSearchContainer form {
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    border-radius: 5px;
+    background-color: white;
+    margin: 0 auto;
+  }
+  .headerBusSearchContainer div input[type="text"],input[type="date"]{
+    height: 30px;
+    width: 300px;
+    border: none;
+    outline: none;
+    font-size: 24px;
+  }
+  
+}
+
+/*================== Trending Packages =====================*/
+
+.TrendingPackages{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+/*Responsive Trending Packages */
+
+@media screen and (max-width: 600px) {
+  .TrendingPackages{
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .TrendingPackages{
+    flex-direction: column;
+  }
+}
+
+/*====================Footer========================*/
+
+.footer {
+  font-family: "Roboto", sans-serif;
+  background: #141516;
+  color: #fff;
+  text-align: left;
+}
+.footer_box {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 100px;
+}
+.footer_list ul li:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.footer_list ul li {
+  list-style-type: none;
+  line-height: 30px;
+  margin-left: -35px;
+}
+.footer_list hr {
+  width: 40%;
+  background: #fff;
+  margin-left: 0;
+}
