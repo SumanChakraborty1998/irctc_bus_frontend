@@ -30,6 +30,7 @@ nav {
 .navElements li {
   list-style: none;
   margin-right: 50px;
+  cursor: pointer;
 }
 
 .navElements li img {
@@ -82,6 +83,62 @@ nav {
     /* display: none; */
     width: 70%;
   }
+}
+
+/*===================Login Model====================*/
+
+.toggleBtnLoin{
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.75);
+  width: fit-content;
+  margin: 0 15%;
+  border-radius: 50px;
+}
+.toggleBtnLoin button{
+  color: #2d2383;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 50px;
+  border:none;
+  outline: none;
+}
+.inputContainer {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: transparent;
+  color: black;
+  min-width: 50px;
+  text-align: center;
+  border:1px solid black;
+  border-left:none;
+}
+
+.inputField {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border:1px solid black;
+  border-right:none;
+}
+
+.loginBtn{
+  margin: 0 40%;
+  padding: 10px;
+  background: #F7C02C;
+  color: #2d2383;
+  border-radius: 25px;
+  border:none;
 }
 
 /*================== Header =====================*/
@@ -158,45 +215,82 @@ nav {
   background-position: 0 6px;
 }
 
+.flights:hover {
+  background-position: 0 -55px;
+  border: 1px solid #FFDD00;
+}
+
 .irctcHotels {
   background-position: -182px 6px;
 }
-
+.irctcHotels:hover{
+  background-position: -182px -55px;
+  border: 1px solid #FFDD00;
+}
 .busTickets {
-  background-position: -486px 6px;
+  background-position: -486px -55px;
+  border: 1px solid #FFDD00;
 }
 
 .retiringRoom {
   background-position: -120px 6px;
 }
-
-.lounge {
-  /* background-position: -61px -56px; */
-  background-position: -61px 5px;
+.retiringRoom:hover{
+  background-position: -120px -55px;
+  border: 1px solid #FFDD00;
 }
 
+.lounge {
+  background-position: -61px 5px;
+}
+.lounge:hover{
+  background-position: -61px -56px;
+  border: 1px solid #FFDD00;
+}
 .tourPackages {
   background-position: -901px 4px;
 }
-
+.tourPackages:hover {
+  background-position: -901px -55px;
+  border: 1px solid #FFDD00;
+}
 .touristTrains {
   background-position: -242px 6px;
+}
+.touristTrains:hover {
+  background-position: -242px -55px;
+  border: 1px solid #FFDD00;
 }
 
 .buddhistTrain {
   background-position: -787px 3px;
 }
+.buddhistTrain:hover {
+  background-position: -787px -56px;
+  border: 1px solid #FFDD00;
+}
 
 .maharajas {
   background-position: -609px 4px;
+}
+.maharajas:hover {
+  background-position: -609px -56px;
+  border: 1px solid #FFDD00;
 }
 
 .goldenChariot {
   background-position: -728px 2px;
 }
-
+.goldenChariot:hover {
+  background-position: -728px -56px;
+  border: 1px solid #FFDD00;
+}
 .cruise {
   background-position: -426px 5px;
+}
+.cruise:hover{
+  background-position: -426px -56px;
+  border: 1px solid #FFDD00;
 }
 
 .headerTitle_1 {
@@ -237,14 +331,20 @@ nav {
   font-size: 24px;
 }
 
-.headerBusSearchContainer div [type="submit"]{
-  padding: 10px;
-  border-radius: 50px;
-}
-.headerSearchBtn{
+.headerSearchBtnContainer{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.busSearchBtn{
+  background-color: #F7C02C;
+  color: #2d2383;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 50px;
 }
 
 /*Responsive Header*/
