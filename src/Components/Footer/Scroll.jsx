@@ -21,7 +21,7 @@ const Scroll = ({ showBelow }) => {
         backgroundColor: "#FECC2F",
       },
       [theme.breakpoints.up("lg")]: {
-        right: "6.5%",
+        right: "2%",
       },
     },
   }));

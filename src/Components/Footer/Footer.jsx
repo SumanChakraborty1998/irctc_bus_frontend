@@ -25,11 +25,8 @@ const Footer = () => {
           <div className={styles.footer_list}>
             <div>IRCTC Popular Hotels</div>
             <hr></hr>
-            <div style={{ display: "flex" }}>
-              <div
-                className={styles.footer_list}
-                style={{ marginRight: 200, marginLeft: -100 }}
-              >
+            <div className={styles.inside_list}>
+              <div className={styles.footer_list}>
                 <ul>
                   <li>New Delhi</li>
                   <li>Mumbai</li>
@@ -67,7 +64,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-     {/* // <FooterCopyRight /> */}
+      <FooterCopyRight />
     </>
   );
 };
