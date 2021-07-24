@@ -35,7 +35,7 @@ export const LoginReducer = (state = initState, action) => {
         isLoading: false,
         isError: true,
       };
-    case LOGOUT_PAGE:
+    case LOG_OUT:
       saveData("auth", false);
       return {
         ...state,

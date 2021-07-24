@@ -2,6 +2,7 @@ import { applyMiddleware, combineReducers, compose, createStore } from "redux";
 import thunk from "redux-thunk";
 import { dataReducer } from "./DataList/reducer";
 import { registerReducer } from "./SignUp/reducer";
+import { LoginReducer } from "./LogIn/reducer";
 
 const rootReducer = combineReducers({
   dataList: dataReducer,

@@ -24,14 +24,15 @@ export const getDataFail = (err) => {
   };
 };
 
-export const getData = (id) => (dispatch, getState) => {
+export const getData = (departure, arrival, date) => (dispatch, getState) => {
   const reqAction = getDataReq();
   dispatch(reqAction);
 
   return axios
-    .get(`http://localhost:2244/${id}`)
+    .get(`http://localhost:2244/routes/${departure}/${arrival}/${date}`)
     .then((res) => {
-      const sucAction = getDataSuc(res.data.data);
+      const sucAction = getDataSuc(res.data.matchedBuses);
+      console.log(res.data.matchedBuses);
       dispatch(sucAction);
       return { success: true };
     })

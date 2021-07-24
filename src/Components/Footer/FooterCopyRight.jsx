@@ -21,13 +21,7 @@ const FooterCopyRight = () => {
           <p>© 2021 IRCTC || All Right Reserved</p>
         </div>
         <div>
-          <div
-            style={{
-              display: "flex",
-              cursor: "pointer",
-              padding: "15px 0",
-            }}
-          >
+          <div className={styles.social_media}>
             <IconContext.Provider
               value={{
                 color: "#007bff",
@@ -76,14 +70,7 @@ const FooterCopyRight = () => {
           </div>
         </div>
         <div>
-          <div
-            style={{
-              display: "flex",
-              cursor: "pointer",
-              padding: "10px",
-            }}
-            className={styles.bottom}
-          >
+          <div className={styles.bottom}>
             <a href="https://www.incredibleindia.org/content/incredibleindia/en.html">
               <img
                 src="https://www.incredibleindia.org/content/dam/incredible-india-v2/images/inc-india-logo.svg"
