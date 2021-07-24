@@ -1,11 +1,16 @@
 import { useState } from "react"
-import data from "../../demoSearchData.json"
+import { useSelector } from "react-redux"
+import { Oops } from "../oops/Oops"
 import SearchItem from "./SearchItem"
 import style from "./SearchList.module.css"
 
 const SearchResultList = () => {
-
-    console.log(data)
+  const busdata = useSelector(state=>state.dataList.data)
+  console.log(busdata)
+  if(busdata.length===0)
+  {
+      return <Oops />
+  }
     return(
           <div className={style.searchResultContainer}>
               <div className={style.searchFilter}>
@@ -41,7 +46,7 @@ const SearchResultList = () => {
               
               <div className={style.searchResultList}>
                     <div className={style.listHeadContainer}>
-                            <h3>We have got 11 results</h3>
+                            <h3>We have got {busdata.length} results</h3>
                             <ul className={style.listHead}>
                                 <li className={style.operator}>Operator</li>
                                 <li>Departure</li>
@@ -52,9 +57,9 @@ const SearchResultList = () => {
                             </ul>
                     </div>
                     {
-                        data.map(item=>{
+                        busdata?.map(item=>{
                             return(
-                               <SearchItem item={item}/>
+                               <SearchItem key ={item._id} item={item}/>
                             )
                         })
                     }

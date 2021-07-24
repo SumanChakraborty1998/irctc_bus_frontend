@@ -2,9 +2,15 @@ import { useState } from "react";
 import style from "../CSS/Components.module.css";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import FormatAlignLeftIcon from '@material-ui/icons/FormatAlignLeft';
+import { useHistory } from "react-router-dom";
 
 const Navbar = ({openForm}) => {
     const [openNavLinks, setOpenNavLinks] = useState(false);
+    const history =useHistory()
+    const handleHome =()=>
+    {
+        history.push("/")
+    }
 
     //To open and close navlinks (sidebar);
     const toggleNaLinks = () => {
@@ -13,7 +19,7 @@ const Navbar = ({openForm}) => {
 
     return (
         <nav style={{ zIndex: "1000" }}>
-            <div className={style.logo}>
+            <div className={style.logo} onClick={handleHome}>
                 <img src="https://www.bus.irctc.co.in/assets/img/tourism-logo.png" />
             </div>
             <ul className={style.navElements}>

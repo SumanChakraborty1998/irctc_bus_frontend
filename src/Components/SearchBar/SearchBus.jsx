@@ -2,17 +2,28 @@ import { useState } from "react";
 import style from "./SearchBar.module.css"
 import SearchIcon from '@material-ui/icons/Search';
 import SearchResultList from "../SearchResultList/SearchResultList";
+import { loadData, saveData } from "../../utils/localStorage";
+import { useDispatch } from "react-redux";
+import { getData } from "../../Redux/DataList/action";
+import { useHistory } from "react-router-dom";
 
 
 const SearchBus = () => {
 
-    const [departFrom, setDepartFrom] = useState("")
-    const [goingTo, setGoingTo] = useState("")
+  const depart = loadData("depart")
+  const go=loadData("going")
+    const [departFrom, setDepartFrom] = useState(depart)
+    const [goingTo, setGoingTo] = useState(go)
     const [date, setDate] = useState("")
-
+   const dispatch = useDispatch()
+   const history = useHistory()
     const handleSubmit = (e) => {
         e.preventDefault();
+        saveData("depart",departFrom)
+        saveData("going",goingTo)
         console.log(departFrom,goingTo,date)
+        dispatch(getData(departFrom,goingTo,date))
+        history.push("/buses")
     }
 
 

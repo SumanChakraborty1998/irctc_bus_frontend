@@ -6,6 +6,8 @@ import SearchIcon from "@material-ui/icons/Search";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getData } from "../../Redux/DataList/action";
+import { loadData, saveData } from "../../utils/localStorage";
+import { useHistory } from "react-router-dom";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -22,17 +24,25 @@ const useStyles = makeStyles((theme) => ({
 
 const Header = () => {
   const classes = useStyles();
-
-  const [departFrom, setDepartFrom] = useState("");
-  const [goingTo, setGoingTo] = useState("");
+  const dest = loadData("depart")||"";
+  const going=loadData("going")||"";
+ // const date =loadData("date")||"";
+ const history = useHistory()
+  const [departFrom, setDepartFrom] = useState(dest);
+  const [goingTo, setGoingTo] = useState(going);
   const [departureDate, setDepartureDate] = useState("");
 
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    saveData("depart",departFrom)
+    saveData("going",goingTo)
+    //saveData("date",departureDate)
+    console.log(departureDate)
     console.log(departFrom, goingTo, departureDate);
     dispatch(getData(departFrom, goingTo, departureDate));
+    history.push("/buses")
   };
 
   return (
@@ -149,7 +159,7 @@ const Header = () => {
                 type="text"
                 value={departFrom}
                 placeholder="Depart From"
-                onChange={(e) => setDepartFrom(e.target.value)}
+                onChange={(e) => {setDepartFrom(e.target.value)}}
               />
             </div>
             <div>
@@ -158,7 +168,7 @@ const Header = () => {
                 type="text"
                 value={goingTo}
                 placeholder="Going to"
-                onChange={(e) => setGoingTo(e.target.value)}
+                onChange={(e) => {setGoingTo(e.target.value)}}
               />
             </div>
             <div>
@@ -166,7 +176,7 @@ const Header = () => {
               <input
                 type="date"
                 value={departureDate}
-                onChange={(e) => setDepartureDate(e.target.value)}
+                onChange={(e) => {setDepartureDate(e.target.value)}}
               />
             </div>
             <div className={style.headerSearchBtnContainer}>
