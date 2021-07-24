@@ -25,6 +25,9 @@ export const signupUser = (payload) => (dispatch) => {
   dispatch(signupReq());
   axios
     .post("http://localhost:2244/users", payload)
-    .then((res) => dispatch(signupSuc(res.data)))
+    .then((res) => {
+      dispatch(signupSuc(res.data));
+      console.log(res.data);
+    })
     .catch((err) => dispatch(signupFail(err)));
 };
