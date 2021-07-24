@@ -1,0 +1,50 @@
+[
+    {
+        "Operator" : "zingbus",
+        "type" : "AC Seater (2 + 2)",
+        "Departure" : "08:00 PM",
+        "TotalDuration" : "15h 40m",
+        "Arrival" : "11:40 AM",
+        "Price" : 1284
+    } ,
+    {
+        "Operator" : "Safar Express Pvt Ltd",
+        "type" : "AC Seater/Sleeper",
+        "Departure" : "09:05 PM",
+        "TotalDuration" : "14h 05m",
+        "Arrival" : "11:10 AM",
+        "Price" : 1999
+    } ,
+    {
+        "Operator" : "Royal Luxury Volvo",
+        "type" : "AC Seater (2 + 1)",
+        "Departure" : "08:30 PM",
+        "TotalDuration" : "11h 30m",
+        "Arrival" : "08:00 AM",
+        "Price" : 2999
+    } ,
+    {
+        "Operator" : "New Golden Transport",
+        "type" : "AC Seater (2 + 2)",
+        "Departure" : "10:00 PM",
+        "TotalDuration" : "16h 00m",
+        "Arrival" : "02:00 PM",
+        "Price" : 1599
+    } ,
+    {
+        "Operator" : "Gajraj bus service",
+        "type" : "AC Seater (2 + 2)",
+        "Departure" : "09:10 PM",
+        "TotalDuration" : "15h 40m",
+        "Arrival" : "11:40 AM",
+        "Price" : 1599
+    } ,
+    {
+        "Operator" : "GK Travels",
+        "type" : "AC Seater (2 + 2)",
+        "Departure" : "08:00 PM",
+        "TotalDuration" : "15h 40m",
+        "Arrival" : "11:40 AM",
+        "Price" : 1999
+    } 
+]

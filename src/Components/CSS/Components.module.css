@@ -177,13 +177,8 @@ nav {
   }
 }
 
-.searchBusHeader {
-  background-color: #2d2383;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
+/*====icons Header=====*/
+
 
 .iconsWrap {
   display: flex;
@@ -298,6 +293,17 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+/*====Search bar Header=====*/
+
+.searchBusHeader {
+  background-color: #2d2383;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .headerBusSearchContainer{
