@@ -1,5 +1,6 @@
 //import Footer from "../Components/FOOTER/Footer";
 
+//import Footer from "../Components/FOOTER/Footer";
 import SearchBus from "../Components/SearchBar/SearchBus";
 
 const SearchResult = () => {
@@ -7,6 +8,7 @@ const SearchResult = () => {
         <div>
             <SearchBus/>
             {/* <Footer/> */}
+            {/* <Footer /> */}
         </div>
     )
 }
