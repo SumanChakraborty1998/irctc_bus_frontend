@@ -2,7 +2,7 @@ import style from "./SearchList.module.css"
 import { useState } from "react"
 
 const SearchItem = ({item}) => {
-
+console.log(item)
         //TO toggle between Boarding/Dropping Points and Cancellation Policy
         const [state,setState] = useState(false)
 
@@ -10,13 +10,13 @@ const SearchItem = ({item}) => {
         <div className={style.searchResult}>
         <ul className={style.searchItem}>
            <li className={style.operator}>
-               {item.Operator} <br/>
+               {/* {item.Operator} <br/> */}
                {item.type} <br/>
            </li>
-           <li>{item.Departure}</li>
-           <li>{item.TotalDuration}</li>
-           <li>{item.Arrival}</li>
-           <li>₹ {item.Price}</li>
+           <li>{item.departureTime}</li>
+           {/* <li>{item.TotalDuration}</li>
+           <li>{item.Arrival}</li> */}
+           <li>₹ {item.fare}</li>
            <li><button className={style.selectSeatBtn}>Select</button></li>
        </ul>
        
