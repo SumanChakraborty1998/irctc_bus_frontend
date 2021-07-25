@@ -6,16 +6,13 @@ import Navbar from '../Components/NAVBAR/Navbar'
 import ReviewBooking from '../Components/ReviewBooking/ReviewBooking'
 import Home from '../Pages/Home'
 import SearchResult from '../Pages/SearchResult'
+import { useContext } from "react";
+import { FunctionContext } from "../Context/FunctionContextProvider";
 
 export const Routes = () => {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => {
-    setOpen(true);
-  };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const {  open, handleOpen, handleClose } = useContext(FunctionContext);
+
   return (
     <div>
       <Navbar openForm={handleOpen} />
