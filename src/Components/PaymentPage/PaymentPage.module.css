@@ -1,0 +1,82 @@
+.card {
+  background: #136a8a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #267871,
+    #136a8a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #267871,
+    #136a8a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  float: left;
+  padding: 200px;
+  margin: 50px;
+  border-radius: 50%;
+  margin-top: 80px;
+}
+
+form h1 {
+  padding: 15px 0;
+  color: #2d2383;
+}
+.form {
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  height: 100vh;
+  width: 350px;
+  padding: 50px;
+}
+.form input {
+  background: #f9f9f9;
+  padding: 10px;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 3px solid #2d2383;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  outline: none;
+  font-weight: 400;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form button {
+  height: 50px;
+  width: 100%;
+  background-color: #2d2383;
+  border-radius: 10px;
+  color: #f9f9f9;
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+  border: 0;
+}
+.form button:hover {
+  opacity: 0.8;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
