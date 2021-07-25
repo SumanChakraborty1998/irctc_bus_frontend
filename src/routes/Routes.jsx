@@ -7,11 +7,11 @@ import ReviewBooking from '../Components/ReviewBooking/ReviewBooking'
 import Home from '../Pages/Home'
 import SearchResult from '../Pages/SearchResult'
 import { useContext } from "react";
-import { FunctionContext } from "../Context/ThemeContextProvider";
+import { FunctionContext } from "../Context/FunctionContextProvider";
 
 export const Routes = () => {
 
-  const {  open, handleOpen, handleClose } = useContext(ThemeContext);
+  const {  open, handleOpen, handleClose } = useContext(FunctionContext);
 
   return (
     <div>
