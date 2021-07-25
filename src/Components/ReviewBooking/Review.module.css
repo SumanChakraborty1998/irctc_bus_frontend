@@ -1,0 +1,211 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Container */
+.container {
+  display: flex;
+  padding: 15px;
+  background: rgb(245, 255, 246);
+  color: #2d2383;
+  line-height: 26px;
+}
+
+/* Left Container */
+.left_con {
+  width: 75%;
+  margin-top: 60px;
+}
+.heading {
+  font-weight: 500;
+  display: block;
+  background: #fff;
+  color: #2d2383;
+  padding: 5px;
+  border-radius: 2px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+}
+.heading2 {
+  display: grid;
+  padding: 0.5rem;
+  gap: 60px;
+  grid-template-columns: auto auto auto auto auto;
+}
+.bus_info {
+  display: flex;
+}
+.bus_info label {
+  color: #212529;
+  padding-left: 10px;
+}
+.bus_info p {
+  color: #666666;
+  padding-left: 10px;
+}
+.seat_info p {
+  color: #212529;
+}
+.seat_info label {
+  color: #666666;
+}
+.boarding_info p,
+span {
+  color: #212529;
+}
+.boarding_info strong {
+  color: #666666;
+}
+.boarding_info label {
+  color: #212529;
+  font-size: small;
+}
+.time_info {
+  color: #666666;
+  font-size: small;
+}
+.duration_info span {
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dropping_info {
+  text-align: right;
+}
+
+.dropping_info p,
+span,
+label {
+  color: #212529;
+  font-size: medium;
+}
+.dropping_info strong {
+  color: #666666;
+}
+.input_box {
+  display: inline;
+}
+.input_box div {
+  padding: 0 10px;
+  margin: 5px;
+}
+.form_con {
+  background: #fff;
+  font-weight: 500;
+  display: block;
+  color: #2d2383;
+  border-radius: 2px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+}
+.info {
+  text-align: center;
+  color: black;
+}
+.form2_con {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+}
+.form2_con div {
+  padding: 0 10px;
+}
+
+/* right-container */
+
+.right_con {
+  width: 25%;
+  margin-top: 60px;
+  margin-left: 2%;
+  height: max-content;
+  position: sticky;
+}
+.fare_info {
+  background: rgb(245, 255, 246);
+  display: flex;
+  justify-content: space-between;
+  margin: 3px;
+  border: 1px solid rgb(218, 218, 218);
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+}
+.fare_terms {
+  margin: 3px;
+}
+.fare_button {
+  display: flex;
+  justify-content: center;
+}
+.fare_button button {
+  margin: 1rem;
+  background: #f7c02c;
+  color: #2d2383;
+  font-weight: 400;
+  border-radius: 25px;
+  border: none;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.fare_button button:hover {
+  opacity: 0.8;
+}
+
+/* Medida Queries */
+@media only screen and (max-width: 966px) {
+  .container {
+    display: inline;
+  }
+  .left_con {
+    width: 100%;
+  }
+  .right_con {
+    width: 100%;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 706px) {
+  .container {
+    display: inline;
+  }
+  .left_con {
+    width: 100%;
+  }
+  .heading2 {
+    display: block;
+    width: auto;
+    text-align: left;
+    margin: 10px;
+  }
+  bus_info {
+    margin: 10px;
+  }
+  .seat_info {
+    margin: 10px;
+  }
+  .boarding_info {
+    margin: 10px;
+  }
+  .duration_info {
+    margin: 10px;
+    float: left;
+  }
+  .dropping_info {
+    clear: both;
+    margin: 10px;
+    text-align: left;
+  }
+  .right_con {
+    width: 100%;
+    margin: auto;
+  }
+}
