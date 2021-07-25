@@ -9,186 +9,222 @@ import { getData } from "../../Redux/DataList/action";
 import { loadData, saveData } from "../../utils/localStorage";
 import { useHistory } from "react-router-dom";
 
-
 const useStyles = makeStyles((theme) => ({
-  container: {
-    display: "flex",
-    flexWrap: "wrap",
-  },
-  textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
-    width: 200,
-  },
+    container: {
+        display: "flex",
+        flexWrap: "wrap",
+    },
+    textField: {
+        marginLeft: theme.spacing(1),
+        marginRight: theme.spacing(1),
+        width: 200,
+    },
 }));
 
 const Header = () => {
-  const classes = useStyles();
-  const dest = loadData("depart")||"";
-  const going=loadData("going")||"";
- // const date =loadData("date")||"";
- const history = useHistory()
-  const [departFrom, setDepartFrom] = useState(dest);
-  const [goingTo, setGoingTo] = useState(going);
-  const [departureDate, setDepartureDate] = useState("");
+    const classes = useStyles();
+    const dest = loadData("depart") || "";
+    const going = loadData("going") || "";
+    // const date =loadData("date")||"";
+    const history = useHistory();
+    const [departFrom, setDepartFrom] = useState(dest);
+    const [goingTo, setGoingTo] = useState(going);
+    const [departureDate, setDepartureDate] = useState("");
 
-  const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    saveData("depart",departFrom)
-    saveData("going",goingTo)
-    //saveData("date",departureDate)
-    console.log(departureDate)
-    console.log(departFrom, goingTo, departureDate);
-    dispatch(getData(departFrom, goingTo, departureDate));
-    history.push("/buses")
-  };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        saveData("depart", departFrom);
+        saveData("going", goingTo);
+        //saveData("date",departureDate)
+        console.log(departureDate);
+        console.log(departFrom, goingTo, departureDate);
+        dispatch(getData(departFrom, goingTo, departureDate));
+        history.push("/buses");
+    };
 
-  return (
-    <header>
-      <div className={style.banner}>
-        <div className={style.headerCol_1}>
-          <img src="https://www.bus.irctc.co.in/assets/img/Bus1.png" />
-        </div>
-        <div className={style.headerCol_2}>
-          <img src="https://www.bus.irctc.co.in/assets/img/Bus2.png" />
-        </div>
-      </div>
-      <div className={style.searchBusHeader}>
-        <ul className={style.iconsWrap}>
-          <li>
-            <a href="#" target="_blank">
-              <div className={`${style.icons} ${style.flights}`}></div>
-              <br />
-              <span>Flights</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <div className={`${style.icons} ${style.irctcHotels}`}></div>
-              <br />
-              <span>Hotels</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <div className={`${style.icons} ${style.busTickets}`}></div>
-              <br />
-              <span>Bus Tickets</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <div className={`${style.icons} ${style.retiringRoom}`}></div>
-              <br />
-              <span>Retiring room</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <div className={`${style.icons} ${style.lounge}`}></div>
-              <br />
-              <span>Lounge</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <div className={`${style.icons} ${style.tourPackages}`}></div>{" "}
-              <br />
-              <span>Tour Packages</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <div className={`${style.icons} ${style.touristTrains}`}></div>
-              <br />
-              <span>Tourist train</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <div className={`${style.icons} ${style.buddhistTrain}`}></div>
-              <br />
-              <span>Buddhist trian</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <div className={`${style.icons} ${style.maharajas}`}></div>
-              <br />
-              <span>Maharajas</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <div className={`${style.icons} ${style.goldenChariot}`}></div>
-              <br />
-              <span>Golden Chariot</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <div className={`${style.icons} ${style.cruise}`}></div>
-              <br />
-              <span>Cruise</span>
-            </a>
-          </li>
-        </ul>
-
-        <div className={style.headerTitle_1}>
-          <DirectionsBusIcon />
-          <h2>Book Bus Ticket</h2>
-        </div>
-
-        <div className={style.headerBusSearchContainer}>
-          <form onSubmit={handleSubmit}>
-            <div>
-              <label>Depart From</label> <br />
-              <input
-                type="text"
-                value={departFrom}
-                placeholder="Depart From"
-                onChange={(e) => {setDepartFrom(e.target.value)}}
-              />
+    return (
+        <header>
+            <div className={style.banner}>
+                <div className={style.headerCol_1}>
+                    <img
+                        src="https://www.bus.irctc.co.in/assets/img/Bus1.png"
+                        alt=""
+                    />
+                </div>
+                <div className={style.headerCol_2}>
+                    <img
+                        src="https://www.bus.irctc.co.in/assets/img/Bus2.png"
+                        alt=""
+                    />
+                </div>
             </div>
-            <div>
-              <label>Going to</label> <br />
-              <input
-                type="text"
-                value={goingTo}
-                placeholder="Going to"
-                onChange={(e) => {setGoingTo(e.target.value)}}
-              />
+            <div className={style.searchBusHeader}>
+                <ul className={style.iconsWrap}>
+                    <li>
+                        <a href="#" target="_blank">
+                            <div
+                                className={`${style.icons} ${style.flights}`}
+                            ></div>
+                            <br />
+                            <span>Flights</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank">
+                            <div
+                                className={`${style.icons} ${style.irctcHotels}`}
+                            ></div>
+                            <br />
+                            <span>Hotels</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank">
+                            <div
+                                className={`${style.icons} ${style.busTickets}`}
+                            ></div>
+                            <br />
+                            <span>Bus Tickets</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank">
+                            <div
+                                className={`${style.icons} ${style.retiringRoom}`}
+                            ></div>
+                            <br />
+                            <span>Retiring room</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank">
+                            <div
+                                className={`${style.icons} ${style.lounge}`}
+                            ></div>
+                            <br />
+                            <span>Lounge</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank">
+                            <div
+                                className={`${style.icons} ${style.tourPackages}`}
+                            ></div>{" "}
+                            <br />
+                            <span>Tour Packages</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank">
+                            <div
+                                className={`${style.icons} ${style.touristTrains}`}
+                            ></div>
+                            <br />
+                            <span>Tourist train</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank">
+                            <div
+                                className={`${style.icons} ${style.buddhistTrain}`}
+                            ></div>
+                            <br />
+                            <span>Buddhist trian</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank">
+                            <div
+                                className={`${style.icons} ${style.maharajas}`}
+                            ></div>
+                            <br />
+                            <span>Maharajas</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank">
+                            <div
+                                className={`${style.icons} ${style.goldenChariot}`}
+                            ></div>
+                            <br />
+                            <span>Golden Chariot</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank">
+                            <div
+                                className={`${style.icons} ${style.cruise}`}
+                            ></div>
+                            <br />
+                            <span>Cruise</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div className={style.headerTitle_1}>
+                    <DirectionsBusIcon />
+                    <h2>Book Bus Ticket</h2>
+                </div>
+
+                <div className={style.headerBusSearchContainer}>
+                    <form onSubmit={handleSubmit}>
+                        <div>
+                            <label>Depart From</label> <br />
+                            <input
+                                type="text"
+                                value={departFrom}
+                                placeholder="Depart From"
+                                onChange={(e) => {
+                                    setDepartFrom(e.target.value);
+                                }}
+                            />
+                        </div>
+                        <div>
+                            <label>Going to</label> <br />
+                            <input
+                                type="text"
+                                value={goingTo}
+                                placeholder="Going to"
+                                onChange={(e) => {
+                                    setGoingTo(e.target.value);
+                                }}
+                            />
+                        </div>
+                        <div>
+                            <label>Departure Date</label> <br />
+                            <input
+                                type="date"
+                                value={departureDate}
+                                onChange={(e) => {
+                                    setDepartureDate(e.target.value);
+                                }}
+                            />
+                        </div>
+                        <div className={style.headerSearchBtnContainer}>
+                            <button
+                                type="submit"
+                                className={style.busSearchBtn}
+                            >
+                                Search Bus <SearchIcon />{" "}
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div>
-              <label>Departure Date</label> <br />
-              <input
-                type="date"
-                value={departureDate}
-                onChange={(e) => {setDepartureDate(e.target.value)}}
-              />
-            </div>
-            <div className={style.headerSearchBtnContainer}>
-              <button type="submit" className={style.busSearchBtn}>
-                Search Bus <SearchIcon />{" "}
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </header>
-  );
+        </header>
+    );
 };
 
 export default Header;
