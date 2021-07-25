@@ -1,16 +1,21 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Oops } from "../oops/Oops";
+import Loader from "./Loader";
 import SearchItem from "./SearchItem";
 import style from "./SearchList.module.css";
 
 const SearchResultList = () => {
     const busdata = useSelector((state) => state.dataList.data);
+    const isLoading= useSelector((state)=>state.dataList.isLoading)
     console.log(busdata);
-    if (busdata?.length === 0) {
-        return <Oops />;
-    }
-    return (
+    setTimeout(() => {
+        if (busdata?.length === 0) {
+            return <Oops />;
+        }
+    }, 3000);
+   
+    return isLoading? (<Loader />):(
         <div className={style.searchResultContainer}>
             <div className={style.searchFilter}>
                 <h3>Filter</h3>
