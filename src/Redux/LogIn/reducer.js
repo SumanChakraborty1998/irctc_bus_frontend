@@ -2,11 +2,11 @@ import { loadData, saveData } from "../../utils/localStorage";
 import { LOGIN_FAILURE, LOGIN_REQ, LOGIN_SUCCESS, LOG_OUT } from "./actionType";
 
 const initState = {
-  isAuth: false,
+  isAuth: false||loadData("auth"),
   isLoading: false,
   isError: false,
-  email: "",
-  password: "",
+  user:{}||loadData("user"),
+  error:""
 };
 export const LoginReducer = (state = initState, action) => {
   const { type, payload } = action;
@@ -18,15 +18,15 @@ export const LoginReducer = (state = initState, action) => {
         isLoading: true,
       };
     case LOGIN_SUCCESS: {
+      saveData("user", payload)
+      saveData("auth",true)
       const dataLocal = {
         ...state,
         isLoading: false,
         isAuth: true,
-        email: payload.email,
-        password: payload.password,
-      };
+        user:payload,
 
-      saveData("data", dataLocal);
+      };
       return dataLocal;
     }
     case LOGIN_FAILURE:
@@ -34,6 +34,7 @@ export const LoginReducer = (state = initState, action) => {
         ...state,
         isLoading: false,
         isError: true,
+        error:payload
       };
     case LOG_OUT:
       saveData("auth", false);
