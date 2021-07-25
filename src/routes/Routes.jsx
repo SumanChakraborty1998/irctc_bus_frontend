@@ -1,22 +1,18 @@
 import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import LoginModel from "../Components/LoginModel/LoginModel";
+import SignUp from "../Components/SignUp/SignUp";
 import Navbar from "../Components/NAVBAR/Navbar";
 import ReviewBooking from "../Components/ReviewBooking/ReviewBooking";
 import Home from "../Pages/Home";
 import SearchResult from "../Pages/SearchResult";
-import SignUp from "../Components/SignUp/SignUp";
+import { useContext } from "react";
+import { FunctionContext } from "../Context/FunctionContextProvider";
 import PaymentPage from "../Components/PaymentPage/PaymentPage";
 
 export const Routes = () => {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => {
-    setOpen(true);
-  };
+  const { open, handleOpen, handleClose } = useContext(FunctionContext);
 
-  const handleClose = () => {
-    setOpen(false);
-  };
   return (
     <div>
       <Navbar openForm={handleOpen} />

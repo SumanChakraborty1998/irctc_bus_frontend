@@ -57,7 +57,14 @@ const LoginModel = ({ open, handleClose, handleOpen }) => {
       alert("login sucess");
       history.push("/");
     }
-  };
+    dispatch(loginUser(payload))
+     if(isAuth)
+     {
+       handleClose()
+       alert("login sucess")
+      // history.push("/")
+     }
+  }
 
   const body = (
     <div style={modalStyle} className={classes.paper}>
