@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Review.module.css";
 import BookingDetails from "./BookingDetails";
 import FareDetails from "./FareDetails";
-import Footer from "../FOOTER/Footer";
+
 
 const ReviewBooking = () => {
   return (
@@ -11,7 +11,7 @@ const ReviewBooking = () => {
         <BookingDetails />
         <FareDetails />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
