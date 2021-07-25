@@ -58,7 +58,7 @@ const LoginModel = ({open,handleClose,handleOpen }) => {
      {
        handleClose()
        alert("login sucess")
-       history.push("/")
+      // history.push("/")
      }
   }
 
