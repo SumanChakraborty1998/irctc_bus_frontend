@@ -7,7 +7,7 @@ import style from "./SearchList.module.css";
 const SearchResultList = () => {
     const busdata = useSelector((state) => state.dataList.data);
     console.log(busdata);
-    if (busdata.length === 0) {
+    if (busdata?.length === 0) {
         return <Oops />;
     }
     return (
