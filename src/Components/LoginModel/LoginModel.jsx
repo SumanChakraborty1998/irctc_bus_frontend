@@ -5,6 +5,7 @@ import VpnKeyIcon from '@material-ui/icons/VpnKey';
 import Modal from '@material-ui/core/Modal';
 import style from "../CSS/Components.module.css";
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 function getModalStyle() {
@@ -58,7 +59,7 @@ const LoginModel = ({open,handleClose,handleOpen }) => {
         </div>    
         <button className={style.loginBtn}>Login</button>
         <hr/>
-        <p>Not a member? <a href="https://www.irctc.co.in/nget/train-search"> Sign </a>UpForgot <a href="https://www.irctc.co.in/">Password?</a> </p>
+        <p>Not a member? <Link to="/signup">Signup</Link>  UpForgot <a href="https://www.irctc.co.in/">Password?</a> </p>
       </div>
 
       <div style={{ display: (toggleForm) ? "block" : "none"}}>
