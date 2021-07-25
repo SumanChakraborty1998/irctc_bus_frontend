@@ -1,11 +1,21 @@
 import style from "./SearchList.module.css"
 import { useState } from "react"
+import { Seats } from "../Seats/Seats"
+import { loadData } from "../../utils/localStorage"
 
 const SearchItem = ({item}) => {
+    const arrivallocation= loadData("going")
+    const departurelocation=loadData("depart")
+    const date="2020-08-30"
+    const details={
+        arrivallocation,
+        departurelocation,
+        date
+    }
 console.log(item)
         //TO toggle between Boarding/Dropping Points and Cancellation Policy
         const [state,setState] = useState(false)
-
+        const [seeSeat,setSeeSeat]=useState(false)
     return(
         <div className={style.searchResult}>
         <ul className={style.searchItem}>
@@ -17,9 +27,9 @@ console.log(item)
            {/* <li>{item.TotalDuration}</li>
            <li>{item.Arrival}</li> */}
            <li>₹ {item.fare}</li>
-           <li><button className={style.selectSeatBtn}>Select</button></li>
+           <li><button className={style.selectSeatBtn} onClick={()=>setSeeSeat(!seeSeat)} >Select</button></li>
        </ul>
-       
+       {seeSeat&&<Seats price={item.fare}  details={details} />}
        <div className={style.dropDownBtns}>
            <div className={style.facilityIcons}>
                <button>1</button>

@@ -170,8 +170,8 @@ export function Seats({ price, details }) {
 
 	//let { matchedBuses } = useSelector((state) => state.bus);
 
-	console.log(matchedBuses.boardingPoints);
-	console.log(matchedBuses.droppingPoint);
+	//console.log(matchedBuses.boardingPoints);
+	//console.log(matchedBuses.droppingPoint);
 
 	let object = {
 		from: departurelocation,
@@ -377,9 +377,9 @@ export function Seats({ price, details }) {
 						name="boradingpoints"
 						onChange={(e) => setBoarding(e.target.value)}
 					>
-						{matchedBuses.boardingPoints?.map((item) => (
+						{/* {matchedBuses.boardingPoints?.map((item) => (
 							<option value={item}>{item}</option>
-						))}
+						))} */}
 					</select>
 				</SeatTaken>
 				<SeatTaken>
@@ -388,9 +388,9 @@ export function Seats({ price, details }) {
 						name="droppingpoint"
 						onChange={(e) => setDroping(e.target.value)}
 					>
-						{matchedBuses.droppingPoint?.map((item) => (
+						{/* {matchedBuses.droppingPoint?.map((item) => (
 							<option value={item}>{item}</option>
-						))}
+						))} */}
 					</select>
 				</SeatTaken>
 				<hr></hr>
