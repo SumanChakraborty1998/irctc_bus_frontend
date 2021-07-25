@@ -21,12 +21,13 @@ export const loginFail = (payload) => {
   };
 };
 
-export const loginUser = (payload) => (dispatch) => {
+export const loginUser = (payload) =>async(dispatch) => {
   dispatch(loginReq());
-  axios
-    .get(`http://localhost:3001/users/${payload.email}/${payload.password}`)
-    .then((res) => {
-      dispatch(loginSuc(res.data));
-    })
-    .catch((err) => dispatch(loginFail(err)));
+   try {
+       const res =  await axios.post("http://localhost:2244/users/signin",payload)
+       dispatch(loginSuc(res.data))
+   } catch (error) {
+       dispatch(loginFail(error)) 
+   }
+
 };
