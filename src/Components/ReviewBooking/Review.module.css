@@ -159,3 +159,53 @@ label {
 .fare_button button:hover {
   opacity: 0.8;
 }
+
+/* Medida Queries */
+@media only screen and (max-width: 966px) {
+  .container {
+    display: inline;
+  }
+  .left_con {
+    width: 100%;
+  }
+  .right_con {
+    width: 100%;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 706px) {
+  .container {
+    display: inline;
+  }
+  .left_con {
+    width: 100%;
+  }
+  .heading2 {
+    display: block;
+    width: auto;
+    text-align: left;
+    margin: 10px;
+  }
+  bus_info {
+    margin: 10px;
+  }
+  .seat_info {
+    margin: 10px;
+  }
+  .boarding_info {
+    margin: 10px;
+  }
+  .duration_info {
+    margin: 10px;
+    float: left;
+  }
+  .dropping_info {
+    clear: both;
+    margin: 10px;
+    text-align: left;
+  }
+  .right_con {
+    width: 100%;
+    margin: auto;
+  }
+}
