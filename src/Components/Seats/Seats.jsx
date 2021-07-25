@@ -187,7 +187,7 @@ export function Seats({ price, details }) {
 		let string = JSON.stringify(object);
 		localStorage.setItem("details", string);
 
-		history.push("/passengerinfo");
+		history.push("/review");
 	};
 
 	return (

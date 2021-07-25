@@ -3,9 +3,11 @@ import style from "../CSS/Components.module.css";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import FormatAlignLeftIcon from '@material-ui/icons/FormatAlignLeft';
 import { useHistory } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Navbar = ({openForm}) => {
     const [openNavLinks, setOpenNavLinks] = useState(false);
+    const isAuth = useSelector(state=>state.login.isAuth)
     const history =useHistory()
     const handleHome =()=>
     {
@@ -30,9 +32,10 @@ const Navbar = ({openForm}) => {
                         <li>1buscare@irctc.com</li>
                     </ul>
                 </li>
-
-                <li onClick={openForm}>Login</li>
-
+                {
+                    isAuth?<li>My account</li>: <li onClick={openForm}>Login</li>
+                }
+               
                 <li>
                     <button
                         onClick={toggleNaLinks}
