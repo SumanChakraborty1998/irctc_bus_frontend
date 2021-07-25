@@ -71,8 +71,13 @@
 
 ### Suman Charkraborty
 - **Github** : https://github.com/SumanChakraborty1998/
-- **Email** : sumanchakra8145@gmail.com
+- **Email** : reachout2suman@gmail.com
 - **Linkedin** : https://www.linkedin.com/in/suman-chakraborty-699308120
+
+### Avinash Nadkar
+- **Github** : https://github.com/avinashnadkar
+- **Email** : avinashnadkar3@gmail.com
+- **Linkedin** : https://www.linkedin.com/in/avinash-nadkar-5932681a3
 
 
 
