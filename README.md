@@ -1,70 +1,78 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# IRCTC-Bus clone
 
-## Available Scripts
+##### Indian Railway Catering and Tourism Corporation Ltd. (IRCTC) is a “Mini Ratna (Category-I)” Central Public Sector Enterprise under Ministry of Railways, Government of India. IRCTC was incorporated on 27th September, 1999 as an extended arm of the Indian Railways
 
-In the project directory, you can run:
+##### The mission is to enhance customer services and facilitation in railway catering, hospitality, travel and tourism with best industry practices
 
-### `npm start`
+## Tech Stacks Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React: [React](https://www.npmjs.com/package/react)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Redux: [Redux](https://www.npmjs.com/package/redux) 
 
-### `npm test`
+- React-Redux: [React-Redux](https://www.npmjs.com/package/react-redux)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Redux-thunks: [Redux-thunks](https://www.npmjs.com/package/thunks)
 
-### `npm run build`
+- Images: [IRCTC Bus](https://www.bus.irctc.co.in/home)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React-Credit-Cards: [React-Credit-Cards](https://www.npmjs.com/package/react-credit-cards)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Material UI: [Material UI](https://material-ui.com/) 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Axios: [Axios](https://www.npmjs.com/package/axios)
 
-### `npm run eject`
+- Styled Components: [Styled Components](https://styled-components.com/)  
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Mongoose: [Mongoose](https://www.npmjs.com/package/mongoose)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Express: [Express](https://www.npmjs.com/package/express)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Landing Page
 
-## Learn More
+- The Landing Page of IRCTC website displays user to select location and date of their own.
+- User can search buses according their requirements.
+- Users can redirects to other official websites of IRCTC.
+- At the bottom there are some FAQ for query resolve.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img width="929" alt="Screenshot (640)" src="https://github.com/SumanChakraborty1998/irctc_bus_frontend/blob/main/public/Images/Screenshot%20(68).png">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Buses Page
 
-### Code Splitting
+- User can see different buses list according their requirements and can select one bus.
+- User have also the freedom to select seats if not booked
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<img width="929" alt="Screenshot (640)" src="https://github.com/SumanChakraborty1998/irctc_bus_frontend/blob/main/public/Images/Screenshot%20(69).png">
 
-### Analyzing the Bundle Size
+<img width="929" alt="Screenshot (640)" src="https://github.com/SumanChakraborty1998/irctc_bus_frontend/blob/main/public/Images/Screenshot%20(70).png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Review Page
 
-### Making a Progressive Web App
+- User can review what are the things, they choose and if all are correct continue to payments
+- They also can go back and change the choosen seat or bus
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<img width="929" alt="Screenshot (640)" src="https://github.com/SumanChakraborty1998/irctc_bus_frontend/blob/main/public/Images/Screenshot%20(71).png">
 
-### Advanced Configuration
+## Payment Page
+- Users will enter their credentials for succesful payments
+- React-credit-card library is used to implement this
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<img width="929" alt="Screenshot (640)" src="https://github.com/SumanChakraborty1998/irctc_bus_frontend/blob/main/public/Images/Screenshot%20(509).png">
 
-### Deployment
+- after succesful payment, user can confirm that booking is done succesfully.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<img width="929" alt="Screenshot (640)" src="https://github.com/SumanChakraborty1998/irctc_bus_frontend/blob/main/public/Images/Screenshot%20(510).png">
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Team Members and Contributors
+
+
+### Suman Charkraborty
+- **Github** : https://github.com/SumanChakraborty1998/
+- **Email** : sumanchakra8145@gmail.com
+- **Linkedin** : https://www.linkedin.com/in/suman-chakraborty-699308120
+
+
+
