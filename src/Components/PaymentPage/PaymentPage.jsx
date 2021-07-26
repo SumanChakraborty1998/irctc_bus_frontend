@@ -4,6 +4,7 @@ import styles from "./PaymentPage.module.css";
 import "react-credit-cards/es/styles-compiled.css";
 import Modal from "react-modal";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function PaymentPage() {
   const [number, setNumber] = useState("");
@@ -12,10 +13,15 @@ function PaymentPage() {
   const [cvc, setCvc] = useState("");
   const [focus, setFocus] = useState("");
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const history = useHistory();
 
   const handleAdd = (e) => {
     e.preventDefault();
     setModalIsOpen(true);
+  };
+
+  const handleBackToHome = (e) => {
+    history.push("/payment");
   };
 
   return (
@@ -124,7 +130,7 @@ function PaymentPage() {
                 <br />
                 <Link to="/">
                   <div className={styles.form}>
-                    <button>Back to HomePage</button>
+                    <button onClick={handleBackToHome}>Back to HomePage</button>
                   </div>
                 </Link>
               </div>

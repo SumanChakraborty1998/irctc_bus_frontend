@@ -1,7 +1,12 @@
 import React from "react";
 import styles from "./Review.module.css";
+import { useHistory } from "react-router-dom";
 
 const FareDetails = () => {
+  const history = useHistory();
+  const handlePayment = (e) => {
+    history.push("/payment");
+  };
   return (
     <>
       <div className={styles.right_con}>
@@ -38,7 +43,7 @@ const FareDetails = () => {
               </label>
             </div>
             <div className={styles.fare_button}>
-              <button>Continue to Book</button>
+              <button onClick={handlePayment}>Continue to Book</button>
             </div>
           </div>
         </div>
