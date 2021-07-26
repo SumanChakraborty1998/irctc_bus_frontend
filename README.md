@@ -79,5 +79,13 @@
 - **Email** : avinashnadkar3@gmail.com
 - **Linkedin** : https://www.linkedin.com/in/avinash-nadkar-5932681a3
 
+### Prashanth Vengala
+- **Github** : https://github.com/prashantvengala
+- **Email** : vengalaprashanth24@gmail.com
+- **Linkedin** : https://www.linkedin.com/in/prashanthvengala/
 
+### Avinash Nadkar
+- **Github** : https://github.com/Ramaruva
+- **Email** : ramrj1428@gmail.com
+- **Linkedin** : https://www.linkedin.com/in/ramakrishnaaruva/
 
